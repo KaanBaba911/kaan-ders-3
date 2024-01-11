@@ -1,0 +1,49 @@
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Yuvarlak Resimler'),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 20), // Üst kısım boşluk
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/image1.jpg'), // İlk resim
+                ),
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/image2.jpg'), // İkinci resim
+                ),
+              ],
+            ),
+            SizedBox(height: 20), // Alt kısım boşluk
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/image3.jpg'), // Üçüncü resim
+                ),
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/image4.jpg'), // Dördüncü resim
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
